@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ovalshape">
+
+    <!--   <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_alignParentTop="true"
+           android:layout_alignLeft="@+id/textView3"
+           android:layout_alignStart="@+id/textView3"
+           android:id="@+id/relativeLayout">
+   -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text=" Hours "
+        android:id="@+id/labelHours"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#FFFFFF"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Minutes"
+        android:id="@+id/labelMinutes"
+        android:layout_alignTop="@+id/labelHours"
+        android:layout_toRightOf="@+id/btnCancel"
+        android:layout_toEndOf="@+id/btnCancel"
+        android:textColor="#FFFFFF"/>
+    <!--android:selectAllOnFocus="true"-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Seconds"
+        android:id="@+id/labelSeconds"
+        android:layout_alignTop="@+id/labelMinutes"
+        android:layout_toRightOf="@+id/labelMinutes"
+        android:layout_marginLeft="44dp"
+        android:layout_marginStart="44dp"
+        android:textColor="#FFFFFF" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/textHours"
+        android:layout_below="@+id/labelHours"
+        android:layout_alignRight="@+id/labelHours"
+        android:layout_alignEnd="@+id/labelHours"
+        android:layout_alignLeft="@+id/labelHours"
+        android:layout_alignStart="@+id/labelHours"
+        android:text="00"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:textColor="#FFFFFF"
+        android:maxLength="2"
+        android:textSize="30sp"
+        android:selectAllOnFocus="true"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/colon"
+        android:layout_toRightOf="@+id/textHours"
+        android:layout_below="@+id/labelHours"
+        android:paddingTop="20dp"
+        android:paddingLeft="11dp"
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/textMinutes"
+        android:layout_alignTop="@+id/textHours"
+        android:layout_toLeftOf="@+id/labelSeconds"
+        android:layout_alignLeft="@+id/labelMinutes"
+        android:layout_alignStart="@+id/labelMinutes"
+        android:text="10"
+        android:textColor="#FFFFFF"
+        android:longClickable="false"
+        android:maxLength="2"
+        android:textSize="30sp"
+        android:selectAllOnFocus="true"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/colon"
+        android:layout_toRightOf="@+id/textMinutes"
+        android:layout_below="@+id/labelHours"
+        android:paddingTop="20dp"
+        android:paddingLeft="15dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/textSeconds"
+        android:layout_alignTop="@+id/textMinutes"
+        android:layout_alignLeft="@+id/labelSeconds"
+        android:layout_alignStart="@+id/labelSeconds"
+        android:layout_alignRight="@+id/labelSeconds"
+        android:layout_alignEnd="@+id/labelSeconds"
+        android:text="00"
+        android:textColor="#FFFFFF"
+        android:maxLength="2"
+        android:textSize="30sp"
+        android:selectAllOnFocus="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:id="@+id/btnOK"
+        android:layout_alignRight="@+id/textSeconds"
+        android:layout_alignEnd="@+id/textSeconds"
+        android:onClick="setTimer"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/buttonshape" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CANCEL"
+        android:id="@+id/btnCancel"
+        android:layout_alignBottom="@+id/btnOK"
+        android:layout_alignLeft="@+id/textHours"
+        android:layout_alignStart="@+id/textHours"
+        android:onClick="cancelTimer"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/buttonshape" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/textHours"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <!--</RelativeLayout>-->
+
+</RelativeLayout><!-- From: file:/C:/Users/Akhil/Desktop/Data/Work/Android/Notify%20Me/09-13-2015/Notify%20Me/app/src/main/res/layout/timerfragment.xml -->
